@@ -1,0 +1,476 @@
+:root {
+  --p-size: 215px;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  background-color: #282828;
+}
+
+h1 {
+  color: rgb(210, 230, 250);
+}
+
+p {
+  display: inline;
+  margin: 0;
+  padding-right: 1ch;
+  padding-left: 1ch;
+  text-align: center;
+  color: rgb(150, 160, 175);
+}
+
+.container {
+  width: max-content;
+  margin: 0% auto;
+  border-radius: 20px;
+  padding: 1%;
+  padding-left: 50px;
+  padding-right: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #003366;
+  min-width: min-content;
+}
+
+.city-choise {
+  margin: 0% auto;
+  user-select: none;
+}
+.city-choise > select {
+  margin-bottom: 10px;
+  cursor: pointer;
+  border: 1px #282828 solid;
+  border-radius: 20px;
+  padding: 4px;
+  padding-left: 8px;
+  background-color: #282828;
+  color: lightslategray;
+  font-size: 1.7em;
+  filter: brightness(100%);
+  transition: filter 200ms ease-in-out;
+}
+.city-choise > select:hover {
+  filter: brightness(120%);
+}
+.city-choise > select:active {
+  filter: brightness(160%);
+}
+
+.data-container {
+  display: flex;
+  justify-content: center;
+  border-radius: 20px;
+  background-color: #003c80;
+}
+.data-container > div > p {
+  display: inline;
+}
+
+.days {
+  display: flex;
+  padding-bottom: 0px;
+}
+
+.legend {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  min-width: fit-content;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+.legend > h1 {
+  margin: 0px;
+  text-align: end;
+  padding-right: 8px;
+}
+.legend > p {
+  text-align: end;
+}
+.legend > .description {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.legend > .description > p {
+  padding: 2px 1ch 2px 1ch;
+  text-align: end;
+}
+
+.day {
+  margin: 10px 10px 0 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.date {
+  margin: 0%;
+  padding: 0px 1ch 0px 1ch;
+  min-width: max-content;
+  text-align: center;
+}
+
+.weather-box {
+  display: flex;
+  justify-content: space-around;
+  max-width: max-content;
+}
+
+.weather-of-time {
+  background-color: #0050a5;
+  border-radius: 10px;
+  border-right: 1px solid #282828;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+  max-width: var(--p-size);
+}
+.weather-of-time > p:first-child {
+  background-color: #004290;
+  border-radius: 8px;
+  border-right: 1px solid #282828;
+  min-width: 100%;
+  cursor: pointer;
+}
+.weather-of-time > p {
+  padding: 2px 1ch 2px 1ch;
+}
+.weather-of-time > p > .rotate {
+  display: inline-block;
+  margin-left: 2px;
+}
+
+.btns {
+  margin: 0% auto;
+  margin-top: 20px;
+  display: flex;
+}
+.btns > button {
+  cursor: pointer;
+  margin-bottom: 10px;
+  border: 3px #282828 solid;
+  border-radius: 20px;
+  padding: 4px;
+  margin: 0px;
+  background-color: #282828;
+  color: lightslategray;
+  font-size: 1.7em;
+  user-select: none;
+  filter: brightness(100%);
+  transition: filter 100ms ease-in-out;
+}
+.btns > button:hover {
+  filter: brightness(120%);
+}
+.btns > button:active {
+  filter: brightness(180%);
+}
+.btns > button:first-child {
+  padding-left: 8px;
+  border-top-right-radius: 0px;
+  border-right: 1px rgb(25, 30, 50) solid;
+  border-bottom-right-radius: 0px;
+}
+.btns > button:last-child {
+  border-top-left-radius: 0px;
+  padding-right: 8px;
+  border-left: 1px rgb(25, 30, 50) solid;
+  border-bottom-left-radius: 0px;
+}
+
+.details {
+  display: none;
+  background-color: #003366;
+  width: max-content;
+  margin: 0% auto;
+  border-radius: 20px;
+  padding: 50px;
+  padding-bottom: 0px;
+  flex-direction: column;
+}
+
+.details-container {
+  display: flex;
+  justify-content: center;
+  border-radius: 20px;
+  background-color: #003c80;
+}
+
+.detail-box {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+.detail-box > .date {
+  display: flex;
+  flex-grow: 1;
+  margin: 0;
+  max-block-size: 43px;
+  padding: 0px 1ch 0px 1ch;
+}
+.detail-box > h1 > img {
+  flex-grow: 1;
+}
+
+.detail-info {
+  background-color: #0050a5;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: #28282840 3px 3px;
+}
+.detail-info > p {
+  padding: 2px 1ch 2px 1ch;
+}
+.detail-info > p:first-child {
+  background-color: #004290;
+  border-right: 2px solid #282828;
+  border-radius: 10px;
+}
+.detail-info > p > .rotate {
+  display: inline-block;
+  margin-left: 2px;
+}
+
+.details-btn {
+  margin: 0% auto;
+}
+.details-btn > button {
+  cursor: pointer;
+  border: 3px #282828 solid;
+  border-radius: 20px;
+  padding: 5px;
+  margin: 8px;
+  background-color: #282828;
+  color: lightslategray;
+  font-size: 1.7em;
+  user-select: none;
+  filter: brightness(100%);
+  transition: filter 100ms ease-in-out;
+}
+.details-btn > button:hover {
+  filter: brightness(120%);
+}
+.details-btn > button:active {
+  filter: brightness(180%);
+}
+
+@media screen and (max-width: 1024px) {
+  .city-choise > select {
+    font-size: 1.2em;
+  }
+  .day {
+    max-width: fit-content;
+  }
+  .weather-box {
+    border-radius: 8px;
+    width: 320px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scroll-snap-align: start;
+    justify-content: start;
+  }
+  .weather-box::-webkit-scrollbar {
+    background-color: #003c80;
+  }
+  .weather-box::-webkit-scrollbar-thumb {
+    background-color: #282828;
+    border-radius: 5px;
+  }
+  .date {
+    max-width: min-content;
+  }
+  .weather-of-time {
+    flex-grow: 1;
+    min-width: 212px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .container {
+    padding: 20px;
+  }
+
+  .data-container {
+    max-width: 320px;
+  }
+
+  .legend > h1 {
+    font-size: 15px;
+  }
+
+  .legend > .description > p {
+    padding: 1px 4px 1px 4px;
+    font-size: 13px;
+  }
+
+  .day {
+    max-width: fit-content;
+    margin-right: 2px;
+  }
+
+  .date {
+    max-width: min-content;
+    font-size: 15px;
+    padding-right: 0%;
+  }
+
+  .weather-box {
+    width: 191px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    overflow-y: hidden;
+    justify-content: start;
+  }
+
+  .weather-of-time {
+    min-width: 191px;
+    scroll-snap-type: mandatory;
+  }
+  .weather-of-time > p {
+    padding: 1px 0ch 1px 0ch;
+    font-size: 13px;
+  }
+
+  .btns {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .btns > button {
+    padding: 100px;
+    justify-content: center;
+  }
+  .btns > button {
+    padding: 20px;
+    margin: 0px;
+  }
+  .btns > button:first-child {
+    padding-left: 20px;
+  }
+  .btns > button:last-child {
+    padding-right: 20px;
+  }
+
+  .details {
+    padding: 0px;
+    max-width: 375px;
+    padding-bottom: 0;
+  }
+
+  .details-container > .legend > h1 {
+    font-size: 13px;
+  }
+  .details-container > .legend > .description > p {
+    padding: 2px 1ch 2px 1ch;
+    font-size: 11px;
+  }
+
+  .detail-box > .date {
+    font-size: 13px;
+    max-block-size: 20px;
+    padding-right: 0;
+  }
+  .detail-box > .date > img {
+    max-width: 12%;
+  }
+
+  .detail-info {
+    max-width: 90%;
+    font-size: 11px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .container {
+    padding: 7px;
+  }
+
+  .data-container {
+    max-width: 270px;
+  }
+
+  .legend > h1 {
+    font-size: 12px;
+  }
+
+  .legend > .description > p {
+    font-size: 11px;
+  }
+
+  .day {
+    margin-right: 2px;
+  }
+
+  .date {
+    font-size: 12px;
+  }
+
+  .weather-box {
+    width: 147px;
+  }
+
+  .weather-of-time {
+    min-width: 147px;
+  }
+  .weather-of-time > p {
+    font-size: 11px;
+  }
+
+  .btns {
+    margin-top: 15px;
+  }
+  .btns > button {
+    padding: 100px;
+    justify-content: center;
+  }
+  .btns > button {
+    padding: 10px;
+    margin: 0px;
+  }
+  .btns > button:first-child {
+    padding-left: 20px;
+  }
+  .btns > button:last-child {
+    padding-right: 20px;
+  }
+
+  .details {
+    max-width: 280px;
+  }
+  .details-container > .legend > h1 {
+    font-size: 10px;
+  }
+  .details-container > .legend > .description > p {
+    padding: 2px 2px 2px 1px;
+    font-size: 9px;
+  }
+
+  .detail-box {
+    max-width: 140px;
+  }
+  .detail-box > .date {
+    font-size: 10px;
+    max-block-size: 14px;
+    padding-right: 0;
+  }
+  .detail-box > .date > img {
+    max-width: 8%;
+  }
+  .detail-info {
+    font-size: 9px;
+  }
+}

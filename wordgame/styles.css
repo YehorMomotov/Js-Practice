@@ -1,202 +1,277 @@
-body{
-    font-family: 'Roboto', sans-serif;
-    background-color: darkcyan;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    box-sizing: border-box;
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: darkcyan;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  box-sizing: border-box;
 }
-button{
-    transition: 500ms all;
-    background-color: darkcyan;
+button {
+  transition: 500ms all;
+  background-color: darkcyan;
 }
-button:hover{
-    background-color: rgb(0, 200, 200);
-    transition-delay: 50ms;
+button:hover {
+  background-color: rgb(0, 200, 200);
+  transition-delay: 50ms;
 }
-h1,h2{
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 10px;
-}
-
-
-
-.main-section{
-    margin-top: 50px;
-    border: darkcyan;
-    border-radius: 10px;
-    padding: 10px 40px 10px 40px;
-    background-color: #ffffff;
-}
-.main-section h1{
-    color: darkcyan;
-    padding-left: 20px;
+h1,
+h2 {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
 }
 
-
+.main-section {
+  margin-top: 50px;
+  border: darkcyan;
+  border-radius: 10px;
+  padding: 10px 40px 10px 40px;
+  background-color: #ffffff;
+}
+.main-section h1 {
+  color: darkcyan;
+  padding-left: 20px;
+}
 
 .description-img {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
-.description-img img{
-    width: 300px;
-    height: 250px;
+.description-img img {
+  width: 300px;
+  height: 250px;
+  border-radius: 10px;
+  margin: 5px;
+}
+.description-section p {
+  max-width: fit-content;
+  font-size: 1.5em;
+  margin: 0 20px 20px 20px;
+  white-space: pre-wrap;
+}
+.description-section p::before {
+  content: "    ";
+}
+
+.user-interraction-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.user-interraction-section h1 {
+  color: black;
+  font-weight: normal;
+  font-style: italic;
+  width: 100%;
+}
+.user-interraction-section p,
+.user-interraction-section span {
+  font-size: 1.2em;
+  margin: 0 0 5px 0;
+}
+.user-interraction-section div {
+  text-align: center;
+}
+.user-interraction-section h2 {
+  width: 100%;
+}
+.user-interraction-section h3 {
+  width: 90%;
+  margin-top: 0em;
+  height: 3.5em;
+  background-color: #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1.5em;
+  font-weight: normal;
+}
+
+.end {
+  text-align: center;
+  background-color: #282828;
+  height: max-content;
+  width: max-content;
+  color: #ffffff;
+  padding: 4%;
+  border-radius: 10px;
+  position: absolute;
+  z-index: 100;
+  top: 5%;
+}
+.end h1 {
+  color: #ffffff;
+  font-weight: normal;
+}
+.end button {
+  color: #ffffff;
+  font-size: 1.5em;
+  border-radius: 10px;
+  border: 10px darkcyan;
+  padding: 10px;
+  margin-left: 20px;
+}
+.end p {
+  font-size: 2em;
+}
+
+.accept-form {
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.accept-form input {
+  font-size: 1.7em;
+  padding: 8.5px;
+  width: 2.5ch;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid #ced4da;
+  margin: 10px;
+  transition: 500ms all ease-in-out;
+}
+.accept-form #str-input {
+  font-size: 1.7em;
+  padding: 8.5px;
+  width: 10em;
+  text-align: center;
+  border-radius: 10px;
+}
+.accept-form input:focus {
+  border: 1px solid darkcyan;
+  box-shadow: 0 0 3px darkcyan;
+  outline-offset: 0px;
+  outline: none;
+}
+.accept-form button {
+  font-size: 1.5em;
+  width: 20em;
+  color: #ffffff;
+  border-radius: 10px;
+  border: 10px darkcyan;
+  padding: 10px;
+}
+
+.disabled {
+  pointer-events: none;
+  user-select: none;
+}
+
+.blur {
+  filter: blur(1.5rem);
+  background-color: #2828287c;
+}
+
+.display-none {
+  display: none;
+}
+
+.pos-relative {
+  position: relative;
+}
+
+.errors {
+  bottom: 64px;
+  border-radius: 10px;
+  padding: 10px;
+  color: #ffffff;
+  background-color: #1f1f1fca;
+  position: absolute;
+  transition: 500ms all ease-in-out;
+}
+
+.final-text {
+  text-align: left;
+  font-size: 1.2em;
+  font-weight: normal;
+  font-style: normal;
+  margin-bottom: 20px;
+  border-bottom: 1px solid;
+}
+.final-text li {
+  list-style-type: none;
+  margin-left: 2.4em;
+}
+li::before {
+  content: "  ";
+}
+
+@media screen and (max-width: 1024px) {
+  .main-section {
+    max-width: 700px;
+    min-width: 700px;
+    padding: 10px;
+  }
+
+  .description-img img {
+    width: 200px;
+    height: 200px;
     border-radius: 10px;
     margin: 5px;
-}
-.description-section p{
-    max-width: fit-content;
-    font-size: 1.5em;
-    margin: 0 20px 20px 20px;
-    white-space: pre-wrap;
-}
-.description-section p::before{
-    content: '    ';
+  }
 }
 
+@media screen and (max-width: 425px) {
+  .main-section {
+    max-width: 360px;
+    min-width: 360px;
+    padding: 5px;
+  }
 
-.user-interraction-section{
-    display: flex;
-    flex-wrap:  wrap;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-.user-interraction-section h1{
-    color: black;
-    font-weight: normal;
-    font-style: italic;
-    width: 100%;
-}
-.user-interraction-section p,.user-interraction-section span{
+  .description-img img {
+    width: 110px;
+    height: 110px;
+  }
+
+  .accept-form button {
+    width: 15em;
+  }
+  .accept-form input {
     font-size: 1.2em;
-    margin: 0 0 5px 0;
-}
-.user-interraction-section div{
-    text-align: center;
-}
-.user-interraction-section h2{
-    width: 100%;
-}
-.user-interraction-section h3{
-    width: 40em;
-    margin-top: 0em;
-    height: 3.5em;
-    background-color: #ccc;
-    border-radius: 10px;
-    padding: 10px;
-    font-size: 1.5em;
-    font-weight: normal;
-}
+    padding: 4.5px;
+    width: 1em;
+  }
 
-
-
-.end{
-    text-align: center;
-    background-color: #282828;
-    height: max-content;
-    width: max-content;
-    color: #ffffff;
-    padding: 4%;
-    border-radius: 10px;
-    position: absolute;
-    z-index: 100;
-    top: 5%;
-}
-.end h1{
-    color: #ffffff;
-    font-weight: normal;
-}
-.end button{
-    color: #ffffff;
-    font-size: 1.5em;
-    border-radius: 10px;
-    border: 10px darkcyan;
-    padding: 10px;
-    margin-left: 20px;
-}
-.end p{
-    font-size: 2em;
-}
-
-.accept-form{
-    max-width:  400px;
-    display: flex;
-    flex-wrap: wrap;
-}
-.accept-form input{
-    font-size: 1.7em;
-    padding: 8.5px;
-    width: 2.5ch;
-    text-align: center;
-    border-radius: 10px;
-    border: 1px solid #ced4da;
-    margin: 10px;
-    transition: 500ms all ease-in-out;
-}
-.accept-form #str-input{
-    font-size: 1.7em; 
-    padding: 8.5px;
-    width: 10em;
-    text-align: center;
-    border-radius: 10px;
-}
-.accept-form input:focus{
-    border: 1px solid darkcyan;
-    box-shadow: 0 0 3px darkcyan;
-    outline-offset: 0px;
-    outline: none;
-}
-.accept-form button{
-    font-size: 1.5em;
-    width: 20em;
-    color: #ffffff;
-    border-radius: 10px;
-    border: 10px darkcyan;
-    padding: 10px;
-}
-
-.disabled{
-    pointer-events: none;
-    user-select: none;
-}
-
-.blur{
-    filter: blur(1.5rem);
-    background-color: #2828287c;
-}
-
-.display-none{
-    display: none;
-}
-
-.pos-relative{
-    position: relative;
-}
-
-.errors{
-    bottom: 64px;
-    border-radius: 10px;
-    padding: 10px;
-    color: #ffffff;
-    background-color: #1f1f1fca;
-    position: absolute;
-    transition: 500ms all ease-in-out;
-}
-
-.final-text{
-    text-align: left;
+  .accept-form #str-input {
     font-size: 1.2em;
-    font-weight: normal;
-    font-style: normal;
-    margin-bottom: 20px;
-    border-bottom: 1px solid ;
+    padding: 4.5px;
+    width: 8em;
+  }
 }
-.final-text li{
-    list-style-type: none;
-    margin-left: 2.4em;
-}
-li::before{
-    content: "  ";
+
+@media screen and (max-width: 320px) {
+  .main-section {
+    max-width: 260px;
+    min-width: 260px;
+    padding: 2px;
+  }
+  .user-interraction-section h1 {
+    width: 90%;
+  }
+  .main-section h1 {
+    font-size: 1.5em;
+  }
+
+  .description-section p {
+    font-size: 1em;
+  }
+  .description-img img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .accept-form button {
+    width: 8em;
+  }
+  .accept-form input {
+    font-size: 1.2em;
+    padding: 4.5px;
+    width: 1em;
+  }
+
+  .accept-form #str-input {
+    font-size: 1.2em;
+    padding: 4.5px;
+    width: 8em;
+  }
 }

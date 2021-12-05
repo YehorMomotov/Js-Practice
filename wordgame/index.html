@@ -1,50 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Палач</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-</head>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
     <div class="end display-none">
-        <div>
+      <div>
         <h1>Игра закончена.</h1>
         <p>Ваш счет: <span id="score">n</span></p>
         <div class="final-text"></div>
         <button id="reload-button">Начать заново</button>
         <button id="close-button">Закрыть страницу</button>
-        </div>
+      </div>
     </div>
     <div class="main-section">
-        <h1>Угадайте слово!</h1>
-        <div class="description-section">
-            <p class="description" title="Описание слова"></p>
-            <div class="description-img"></div>
-        </div>  
-        <div class="user-interraction-section">
-            <h1 class="the-word"></h1>
-            <p>Попыток осталось: <span id="attempts">n</span></p>
-            <div class="pos-relative">
-                <div class="errors display-none">
-                Вы уже вводили эту букву!
-                </div>  
-                <form class="accept-form" action="#confirm-button">
-                <input id="char-input" type="text" onPaste="return false" placeholder="?" maxlength="1">
-                <input id="str-input" type="text" onPaste="return false" placeholder="Введите слово" maxlength="20">
-                <button id="confirm-button">Подтвердить выбор</button>
-                </form>
-            </div>
-            <h2>Уже использовали:</h2>
-            <h3 class="already-used" title="Данные, уже введенные пользователем"></h3>
+      <h1>Угадайте слово!</h1>
+      <div class="description-section">
+        <p class="description" title="Описание слова"></p>
+        <div class="description-img"></div>
+      </div>
+      <div class="user-interraction-section">
+        <h1 class="the-word"></h1>
+        <p>Попыток осталось: <span id="attempts">n</span></p>
+        <div class="pos-relative">
+          <div class="errors display-none">Вы уже вводили эту букву!</div>
+          <form class="accept-form" action="#confirm-button">
+            <input
+              id="char-input"
+              type="text"
+              onPaste="return false"
+              placeholder="?"
+              maxlength="1"
+            />
+            <input
+              id="str-input"
+              type="text"
+              onPaste="return false"
+              placeholder="Введите слово"
+              maxlength="20"
+            />
+            <button id="confirm-button">Подтвердить выбор</button>
+          </form>
         </div>
+        <h2>Уже использовали:</h2>
+        <h3
+          class="already-used"
+          title="Данные, уже введенные пользователем"
+        ></h3>
+      </div>
     </div>
     <script src="main.js"></script>
-</body>
-
+  </body>
 </html>

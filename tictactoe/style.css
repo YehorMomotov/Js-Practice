@@ -1,0 +1,131 @@
+:root {
+  --box-size: 180px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #282828;
+}
+
+.container {
+  padding: calc(var(--box-size) / 5);
+  padding-bottom: calc(var(--box-size) / 1.8);
+  background-color: cadetblue;
+  border-radius: 50px;
+  color: aliceblue;
+  width: calc(4 * var(--box-size));
+  max-height: max-content;
+  margin: 0% auto;
+  text-align: center;
+  position: relative;
+  margin-top: 50px;
+}
+
+.area-wrapper {
+  margin: 0% auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-height: calc(3 * var(--box-size));
+  max-width: calc(3 * var(--box-size));
+}
+
+.box {
+  user-select: none;
+  box-sizing: border-box;
+  border: 1px wheat solid;
+  height: var(--box-size);
+  width: var(--box-size);
+  background-color: whitesmoke;
+  font-size: 10em;
+  color: black;
+}
+
+.modal-window {
+  width: 50%;
+  height: 50%;
+  background-color: #282828;
+  border-radius: 30px;
+  padding: 50px;
+  justify-content: space-evenly;
+  flex-direction: column;
+  position: absolute;
+  display: none;
+}
+.score > li {
+  font-size: 1.6em;
+  text-align: left;
+  margin-left: 10%;
+}
+.result {
+  font-size: 2.2em;
+  margin: 0;
+  color: #ffffff;
+}
+
+#restart {
+  max-width: fit-content;
+  margin: 0% auto;
+  color: #ffffff;
+  border-radius: 10px;
+  border: 10px solid cadetblue;
+  background-color: cadetblue;
+  font-size: 1.7em;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --box-size: 90px;
+  }
+
+  .result {
+    font-size: 1.2em;
+  }
+  .score > li {
+    font-size: 1em;
+    text-align: left;
+    margin-left: 10%;
+  }
+  .box {
+    font-size: 5.5em;
+  }
+  #restart {
+    font-size: 1.5em;
+  }
+  .score {
+    margin-left: 0%;
+    padding-left: 0px;
+  }
+}
+@media (max-width: 400px) {
+  :root {
+    --box-size: 60px;
+  }
+
+  .box {
+    font-size: 3.5em;
+  }
+
+  .container h1 {
+    font-size: 1.6em;
+  }
+  .score > li {
+    font-size: 0.7em;
+    text-align: left;
+    margin-left: 0%;
+  }
+  .score {
+    margin-left: 0%;
+    padding-left: 5px;
+  }
+  .result {
+    margin-top: 10px;
+    font-size: 1em;
+  }
+  #restart {
+    font-size: 1em;
+  }
+}

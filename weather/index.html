@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Погода</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <script src="main.js" defer></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="city-choise">
+        <select name="cities" id="select-city">
+          <option value="Kharkiv" id="Kharkiv">Харьков</option>
+          <option value="Kiev" id="Kiev">Киев</option>
+          <option value="Dnipro" id="Dnipro">Днепр</option>
+        </select>
+      </div>
+      <div class="data-container">
+        <div class="legend">
+          <h1>День</h1>
+          <div class="description">
+            <p>Время</p>
+            <p>Короткое описание</p>
+            <p>Температура, С°</p>
+            <p>Ощущается как, С°</p>
+            <p>Давление, мм</p>
+            <p>Облачность, %</p>
+            <p>Влажность, %</p>
+            <p>Видимость, м</p>
+            <p>Ветер, м/c</p>
+          </div>
+        </div>
+        <div class="days"></div>
+      </div>
+      <div class="btns">
+        <button id="prev">←</button>
+        <button id="next">→</button>
+      </div>
+    </div>
+    <div class="details">
+      <div class="details-container">
+        <div class="legend">
+          <h1>День</h1>
+          <div class="description">
+            <p>Время</p>
+            <p>Краткое описание</p>
+            <p>Температура, С°</p>
+            <p>Максимальная температура, м/c</p>
+            <p>Минимальная температура, м/c</p>
+            <p>Ощущается как, С°</p>
+            <p>Давление, мм</p>
+            <p>Давление на поверхности, мм</p>
+            <p>Давление на уровне моря, мм</p>
+            <p>Облачность, %</p>
+            <p>Влажность, %</p>
+            <p>Видимость, м</p>
+            <p>Ветер, м/c</p>
+            <p>Ускорение порывов ветра, м/c</p>
+          </div>
+        </div>
+      </div>
+      <div class="details-btn">
+        <button id="btn-return">Назад</button>
+      </div>
+    </div>
+  </body>
+</html>

@@ -267,7 +267,7 @@ p {
   filter: brightness(180%);
 }
 
-@media screen and (max-width: 1024px) {
+@media (max-width: 1024px) {
   .city-choise > select {
     font-size: 1.2em;
   }
@@ -300,7 +300,7 @@ p {
   }
 }
 
-@media screen and (max-width: 425px) {
+@media (max-width: 425px) {
   .container {
     padding: 20px;
   }
@@ -394,7 +394,7 @@ p {
   }
 }
 
-@media screen and (max-width: 320px) {
+@media (max-width: 320px) {
   .container {
     padding: 7px;
   }
